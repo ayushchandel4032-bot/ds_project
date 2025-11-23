@@ -1,0 +1,44 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: #0f172a; color: #e2e8f0; }
+
+.app-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: #111827; border-bottom: 1px solid #1f2937; }
+.app-header h1 { margin: 0; font-size: 18px; }
+
+.tabs { display: flex; gap: 8px; }
+.tab { background: #1f2937; color: #e2e8f0; border: 1px solid #374151; padding: 8px 12px; border-radius: 8px; cursor: pointer; }
+.tab.active { background: #2563eb; border-color: #2563eb; }
+
+.view { display: none; padding: 16px; }
+.view.active { display: block; }
+
+.layout { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+
+.panel { background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 16px; }
+.panel h2 { margin-top: 0; font-size: 16px; }
+
+.form-row { display: flex; gap: 8px; }
+.form-col { display: grid; gap: 8px; }
+input, select, textarea, button { border-radius: 8px; border: 1px solid #374151; background: #0b1220; color: #e2e8f0; padding: 8px 10px; }
+button { background: #2563eb; border-color: #2563eb; cursor: pointer; }
+button:hover { filter: brightness(1.1); }
+
+.list { display: grid; gap: 8px; }
+.item { padding: 10px; background: #0b1220; border: 1px solid #1f2937; border-radius: 8px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.item .meta { font-size: 12px; color: #9ca3af; }
+.badge { padding: 2px 6px; font-size: 11px; border-radius: 999px; background: #374151; color: #e5e7eb; }
+
+.progress { height: 10px; background: #0b1220; border: 1px solid #1f2937; border-radius: 999px; overflow: hidden; }
+.progress > div { height: 100%; background: linear-gradient(90deg, #22c55e, #16a34a); width: 0%; transition: width 0.3s ease; }
+
+.reminders { margin-top: 12px; display: grid; gap: 6px; }
+.reminder { font-size: 12px; color: #fbbf24; }
+
+.notes textarea { width: 100%; min-height: 120px; resize: vertical; }
+.note-actions { margin-top: 8px; display: flex; gap: 8px; }
+.notes-history { margin-top: 10px; font-size: 12px; color: #9ca3af; }
+
+.analytics { font-size: 14px; color: #9ca3af; display: grid; gap: 6px; }
+
+.app-footer { padding: 12px 16px; border-top: 1px solid #1f2937; background: #0b1220; text-align: center; font-size: 12px; color: #9ca3af; }
+

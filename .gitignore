@@ -1,0 +1,32 @@
+# Build artifacts
+*.o
+*.dSYM/
+*.dSYM/**
+classroom
+syllabus-tracker/c/syllabus
+syllabus-tracker/c/datastructures.o
+syllabus-tracker/c/syllabus.o
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Compiled binaries
+*.exe
+*.out
+*.a
+*.so
+*.dylib
+
+# Debug files
+*.dSYM
+*.pdb
+

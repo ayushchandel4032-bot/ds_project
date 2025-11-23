@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Syllabus Tracker</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<header class="app-header">
+		<h1>Syllabus Tracker</h1>
+		<nav class="tabs">
+			<button id="tab-student" class="tab active">Student</button>
+			<button id="tab-teacher" class="tab">Teacher</button>
+		</nav>
+	</header>
+
+	<main>
+		<section id="student-view" class="view active">
+			<div class="layout">
+				<div class="panel">
+					<h2>My Subjects</h2>
+					<div id="student-subject-list" class="list"></div>
+				</div>
+				<div class="panel">
+					<h2>Topics</h2>
+					<div id="student-topic-list" class="list"></div>
+				</div>
+				<div class="panel">
+					<h2>Progress</h2>
+					<div id="progress-container"></div>
+					<div id="reminders" class="reminders"></div>
+				</div>
+			</div>
+
+			<div class="panel">
+				<h2>My Notes</h2>
+				<div class="notes">
+					<textarea id="notes-input" placeholder="Write your study notes here..."></textarea>
+					<div class="note-actions">
+						<button id="save-note">Save</button>
+						<button id="undo-note">Undo</button>
+					</div>
+					<div id="notes-history" class="notes-history"></div>
+				</div>
+			</div>
+		</section>
+
+		<section id="teacher-view" class="view">
+			<div class="layout">
+				<div class="panel">
+					<h2>Subjects</h2>
+					<form id="add-subject-form" class="form-row">
+						<input id="subject-name" type="text" placeholder="Subject name" required />
+						<button type="submit">Add Subject</button>
+					</form>
+					<div id="teacher-subject-list" class="list"></div>
+				</div>
+				<div class="panel">
+					<h2>Topics</h2>
+					<form id="add-topic-form" class="form-col">
+						<select id="topic-subject" required></select>
+						<input id="topic-title" type="text" placeholder="Topic title" required />
+						<input id="topic-date" type="date" />
+						<input id="topic-resource" type="url" placeholder="Resource URL (PDF/PPT)" />
+						<button type="submit">Add Topic</button>
+					</form>
+					<div id="teacher-topic-list" class="list"></div>
+				</div>
+				<div class="panel">
+					<h2>Actions</h2>
+					<button id="push-notice">Push Notice</button>
+					<button id="mark-taught-today">Mark Today's Topics Taught</button>
+					<div id="teacher-analytics" class="analytics"></div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="app-footer">Made with C, HTML, CSS, and JavaScript</footer>
+
+	<script src="app.js"></script>
+</body>
+</html>
+
